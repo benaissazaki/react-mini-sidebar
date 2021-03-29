@@ -119,6 +119,11 @@
     max-height: 30px;
 }
 
+.sidebar_navigation_icon img {
+    max-width: 100%;
+    max-height: 30px;
+}
+
 .sidebar_navigation_label {
     display: inline-block;
     width: 150px;
