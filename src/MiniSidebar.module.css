@@ -1,0 +1,129 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 1s;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.overlay.active_md {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 768px) {
+    .overlay.active {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.sidebar {
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: width 1s;
+}
+
+.sidebar_collapsable_md {
+    width: 70px;
+}
+.sidebar.expanded_md {
+    width: 250px;
+}
+
+@media(max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+
+    .sidebar.expanded {
+        width: 250px;
+    }
+}
+
+.sidebar_collapse_btn {
+    background-color: transparent;
+    padding-bottom: 10px;
+    display: none;
+    border: none;
+    font-size: 40px;
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    transition: transform 1s;
+}
+
+.sidebar_collapse_btn_md {
+    display: block;
+}
+
+.sidebar_collapse_btn_collapsed {
+    transform: rotate(0deg);
+}
+
+.sidebar_collapse_btn_expanded {
+    transform: rotate(180deg);
+}
+
+@media(max-width: 768px) {
+    .sidebar_collapse_btn {
+        display: block;
+    }
+}
+
+.sidebar_header {
+    border-bottom: solid 1px #e2e2e2;
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar_navigation {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.sidebar_navigation a {
+    text-decoration: none;
+}
+
+.sidebar_navigation_item {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 300px;
+}
+
+.sidebar_navigation_item:hover {
+    background-color: #e2e2e2;
+}
+
+:global(.active) .sidebar_navigation_item {
+    border-left: solid blue 2px;
+}
+
+.sidebar_navigation_icon {
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.sidebar_navigation_icon svg {
+    max-height: 30px;
+}
+
+.sidebar_navigation_label {
+    display: inline-block;
+    width: 150px;
+    font-size: 20px;
+    font-weight: 100;
+    position: relative;
+    bottom: 8px;
+}
