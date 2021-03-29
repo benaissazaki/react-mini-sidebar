@@ -5,7 +5,7 @@ import 'mini-sidebar/dist/index.css'
 
 const App = () => {
   return (
-    <MiniSidebar>
+    <MiniSidebar collapseOnMd={true}>
       <MiniSidebarHeader>
         Test
       </MiniSidebarHeader>
