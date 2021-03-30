@@ -6,11 +6,11 @@ import 'mini-sidebar/dist/index.css'
 const App = () => {
   const [collapseOnMd, setCollapseOnMd] = useState(false)
   const [withOverlay, setWithOverlay] = useState(false)
-  const [extendOnHover, setExtendOnhover] = useState(false)
+  const [expandOnHover, setExtendOnhover] = useState(false)
 
   return (
     <>
-      <MiniSidebar collapseOnMd={collapseOnMd} withOverlay={withOverlay} extendOnHover={extendOnHover}>
+      <MiniSidebar collapseOnMd={collapseOnMd} withOverlay={withOverlay} expandOnHover={expandOnHover}>
         <MiniSidebarHeader>
           Test
         </MiniSidebarHeader>
@@ -96,7 +96,7 @@ const App = () => {
         <input id="overlay" type="checkbox" onChange={e => setWithOverlay(!withOverlay)}/> <br/>
 
         <label htmlFor="hover">Extend and collapse by hovering (big screen only):</label>
-        <input id="hover" type="checkbox" onChange={e => setExtendOnhover(!extendOnHover)}/> <br/>
+        <input id="hover" type="checkbox" onChange={e => setExtendOnhover(!expandOnHover)}/> <br/>
       </div>
     </>
   )
