@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import styles from './MiniSidebar.module.css'
-
+import Proptypes from 'prop-types'
 
 export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true, extendOnHover = false }) => {
     const [collapsed, setCollapsed] = useState(true);
@@ -24,4 +24,10 @@ export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true
             </aside>
         </>
     )
+}
+
+MiniSidebar.propTypes = {
+    collapseOnMd: Proptypes.bool,
+    withOverlay: Proptypes.bool,
+    extendOnHover: Proptypes.bool
 }
