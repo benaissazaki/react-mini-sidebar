@@ -53,5 +53,7 @@
   "files": [
     "dist"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "react-responsive": "^8.2.0"
+  }
 }
