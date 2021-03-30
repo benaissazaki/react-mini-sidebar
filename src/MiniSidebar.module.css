@@ -6,15 +6,18 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -9999;
 }
 
 .overlay.active_md {
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999
 }
 
 @media(max-width: 768px) {
     .overlay.active {
         background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
     }
 }
 
@@ -28,6 +31,7 @@
     background-color: white;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     transition: width 1s;
+    z-index: 10000;
 }
 
 .sidebar_collapsable_md {
@@ -58,6 +62,10 @@
     bottom: 15px;
     left: 10px;
     transition: transform 1s;
+}
+
+.sidebar_collapse_btn:focus {
+    outline: none;
 }
 
 .sidebar_collapse_btn_md {
