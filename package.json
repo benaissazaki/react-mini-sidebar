@@ -4,7 +4,7 @@
   "description": "Responsive React Sidebar component that shows only navigation icons when collapsed.",
   "author": "lilxak",
   "license": "MIT",
-  "repository": "lilxak/mini-sidebar",
+  "repository": "lilxak/react-mini-sidebar",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",

@@ -17,7 +17,7 @@ const App = () => {
         <MiniSidebarNavigation>
           <MiniSidebarNavigationitem>
             <MiniSidebarNavigationIcon>
-              <img src="/favicon.ico" alt="altt" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Etcher-icon.png" alt="altt" />
             </MiniSidebarNavigationIcon>
             <MiniSidebarNavigationLabel>
               Test
@@ -72,7 +72,7 @@ const App = () => {
           </MiniSidebarNavigationitem>
           <MiniSidebarNavigationitem>
             <MiniSidebarNavigationIcon>
-              <img src="/icon.png" alt="altt" />
+              <img src="https://au.int/sites/default/files/blocks/32111-img-radio-icon.png" alt="altt" />
             </MiniSidebarNavigationIcon>
             <MiniSidebarNavigationLabel>
               Test
@@ -80,7 +80,7 @@ const App = () => {
           </MiniSidebarNavigationitem>
           <MiniSidebarNavigationitem>
             <MiniSidebarNavigationIcon>
-              <img src="/rocket.png" alt="altt" />
+              <img src="https://www.freepnglogos.com/uploads/lamp/creative-idea-bulb-light-lamp-svg-png-icon-download-4.png" alt="altt" />
             </MiniSidebarNavigationIcon>
             <MiniSidebarNavigationLabel>
               Test
