@@ -1,8 +1,8 @@
-# mini-sidebar
+# react-mini-sidebar
 
 > Responsive React Sidebar component that shows only navigation icons when collapsed.
 
-[![NPM](https://img.shields.io/npm/v/mini-sidebar.svg)](https://www.npmjs.com/package/mini-sidebar) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-mini-sidebar.svg)](https://www.npmjs.com/package/react-mini-sidebar) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import { MiniSidebar, MiniSidebarHeader, MiniSidebarNavigation, MiniSidebarNavigationIcon, MiniSidebarNavigationitem, MiniSidebarNavigationLabel } from 'mini-sidebar'
-import 'mini-sidebar/dist/index.css'
+import { MiniSidebar, MiniSidebarHeader, MiniSidebarNavigation, MiniSidebarNavigationIcon, MiniSidebarNavigationitem, MiniSidebarNavigationLabel } from 'react-mini-sidebar'
+import 'react-mini-sidebar/dist/index.css'
 
 const App = () => {
   const [collapseOnMd, setCollapseOnMd] = useState(false)

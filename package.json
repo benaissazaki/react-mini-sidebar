@@ -1,7 +1,7 @@
 {
-  "name": "mini-sidebar",
+  "name": "react-mini-sidebar",
   "version": "1.0.0",
-  "description": "Sidebar that collapses to show only navigation icons",
+  "description": "Responsive React Sidebar component that shows only navigation icons when collapsed.",
   "author": "lilxak",
   "license": "MIT",
   "repository": "lilxak/mini-sidebar",
