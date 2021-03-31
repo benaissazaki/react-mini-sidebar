@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-mini-sidebar/static/css/main.02c59eac.chunk.css",
-    "main.js": "/react-mini-sidebar/static/js/main.ac87c60e.chunk.js",
-    "main.js.map": "/react-mini-sidebar/static/js/main.ac87c60e.chunk.js.map",
-    "runtime-main.js": "/react-mini-sidebar/static/js/runtime-main.d368a98d.js",
-    "runtime-main.js.map": "/react-mini-sidebar/static/js/runtime-main.d368a98d.js.map",
-    "static/js/2.86573380.chunk.js": "/react-mini-sidebar/static/js/2.86573380.chunk.js",
-    "static/js/2.86573380.chunk.js.map": "/react-mini-sidebar/static/js/2.86573380.chunk.js.map",
-    "index.html": "/react-mini-sidebar/index.html",
-    "precache-manifest.a71cf818f0aeb5cd5da9079c4fe643ac.js": "/react-mini-sidebar/precache-manifest.a71cf818f0aeb5cd5da9079c4fe643ac.js",
-    "service-worker.js": "/react-mini-sidebar/service-worker.js",
-    "static/css/main.02c59eac.chunk.css.map": "/react-mini-sidebar/static/css/main.02c59eac.chunk.css.map",
-    "static/js/2.86573380.chunk.js.LICENSE.txt": "/react-mini-sidebar/static/js/2.86573380.chunk.js.LICENSE.txt"
+    "main.css": "./static/css/main.02c59eac.chunk.css",
+    "main.js": "./static/js/main.ac87c60e.chunk.js",
+    "main.js.map": "./static/js/main.ac87c60e.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.27736fe1.js",
+    "runtime-main.js.map": "./static/js/runtime-main.27736fe1.js.map",
+    "static/js/2.86573380.chunk.js": "./static/js/2.86573380.chunk.js",
+    "static/js/2.86573380.chunk.js.map": "./static/js/2.86573380.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.0147c04c0fa5936cb9886f05583d233c.js": "./precache-manifest.0147c04c0fa5936cb9886f05583d233c.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.02c59eac.chunk.css.map": "./static/css/main.02c59eac.chunk.css.map",
+    "static/js/2.86573380.chunk.js.LICENSE.txt": "./static/js/2.86573380.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d368a98d.js",
+    "static/js/runtime-main.27736fe1.js",
     "static/js/2.86573380.chunk.js",
     "static/css/main.02c59eac.chunk.css",
     "static/js/main.ac87c60e.chunk.js"
