@@ -7,7 +7,7 @@ const NavigationItem = styled.li`
     padding-top: 10px;
     padding-bottom: 10px;
     width: 300px;
-    color: ${props => props.color};
+    color: ${props => props.color || 'black'};
     &:hover {
         background-color: #e2e2e2;
     }
