@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
-import styles from './MiniSidebar.module.css'
 import Proptypes from 'prop-types'
 import styled from 'styled-components'
 

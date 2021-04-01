@@ -1,10 +1,16 @@
 import React from "react"
-import styles from "./MiniSidebar.module.css";
+import styled from "styled-components";
+
+const Header = styled.div`
+    border-bottom: solid 1px #e2e2e2;
+    padding: 15px;
+    text-align: center;
+`
 
 export const MiniSidebarHeader = (props) => {
     return (
-        <div className={styles.sidebar_header}>
+        <Header>
             {props.children}
-        </div>
+        </Header>
     )
 }

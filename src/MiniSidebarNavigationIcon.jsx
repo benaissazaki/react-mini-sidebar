@@ -1,10 +1,23 @@
 import React from "react"
-import styles from "./MiniSidebar.module.css";
+import styled from "styled-components";
+
+const NavigationIcon = styled.div`
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+
+    & svg, & img {
+        max-width: 100%;
+        max-height: 30px;
+    }
+`
 
 export const MiniSidebarNavigationIcon = (props) => {
     return (
-        <div className={styles.sidebar_navigation_icon}>
+        <NavigationIcon>
             {props.children}
-        </div>
+        </NavigationIcon>
     )
 }

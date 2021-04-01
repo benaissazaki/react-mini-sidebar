@@ -1,10 +1,21 @@
 import React from "react"
-import styles from "./MiniSidebar.module.css";
+import styled from "styled-components";
+
+const Navigation = styled.ul`
+    list-style: none;
+    padding-left: 0px;
+
+    & a {
+        text-decoration: none;
+    }
+`
 
 export const MiniSidebarNavigation = (props) => {
     return (
-        <ul className={styles.sidebar_navigation}>
-            {props.children}
-        </ul>
+        <nav>
+            <Navigation>
+                {props.children}
+            </Navigation>
+        </nav>
     )
 }

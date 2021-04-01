@@ -1,10 +1,19 @@
 import React from "react"
-import styles from "./MiniSidebar.module.css";
+import styled from "styled-components";
+
+const NavigationLabel = styled.div`
+    display: inline-block;
+    width: 150px;
+    font-size: 20px;
+    font-weight: 100;
+    position: relative;
+    bottom: 8px;
+`
 
 export const MiniSidebarNavigationLabel = (props) => {
     return (
-        <div className={styles.sidebar_navigation_label}>
+        <NavigationLabel>
             {props.children}
-        </div>
+        </NavigationLabel>
     )
 }

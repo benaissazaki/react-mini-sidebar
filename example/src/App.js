@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 import { MiniSidebar, MiniSidebarHeader, MiniSidebarNavigation, MiniSidebarNavigationIcon, MiniSidebarNavigationitem, MiniSidebarNavigationLabel } from 'react-mini-sidebar'
-import 'react-mini-sidebar/dist/index.css'
 
 const App = () => {
   const [collapseOnMd, setCollapseOnMd] = useState(false)
@@ -15,14 +14,16 @@ const App = () => {
           Test
         </MiniSidebarHeader>
         <MiniSidebarNavigation>
-          <MiniSidebarNavigationitem>
-            <MiniSidebarNavigationIcon>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Etcher-icon.png" alt="altt" />
-            </MiniSidebarNavigationIcon>
-            <MiniSidebarNavigationLabel>
-              Test
-          </MiniSidebarNavigationLabel>
-          </MiniSidebarNavigationitem>
+          <a className="active" href="/">
+            <MiniSidebarNavigationitem>
+              <MiniSidebarNavigationIcon>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Etcher-icon.png" alt="altt" />
+              </MiniSidebarNavigationIcon>
+              <MiniSidebarNavigationLabel>
+                Active Link
+              </MiniSidebarNavigationLabel>
+            </MiniSidebarNavigationitem>
+          </a>
           <MiniSidebarNavigationitem>
             <MiniSidebarNavigationIcon>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" version="1.1">
@@ -88,15 +89,15 @@ const App = () => {
           </MiniSidebarNavigationitem>
         </MiniSidebarNavigation>
       </MiniSidebar>
-      <div style={{marginLeft: "30%", marginTop: "250px"}}>
+      <div style={{ marginLeft: "30%", marginTop: "250px" }}>
         <label htmlFor="collapse">Collapse sidebar on big screens:</label>
-        <input type="checkbox" onChange={e => setCollapseOnMd(!collapseOnMd)} /> <br/>
+        <input type="checkbox" onChange={e => setCollapseOnMd(!collapseOnMd)} /> <br />
 
         <label htmlFor="overlay">Activate overlay:</label>
-        <input id="overlay" type="checkbox" onChange={e => setWithOverlay(!withOverlay)}/> <br/>
+        <input id="overlay" type="checkbox" onChange={e => setWithOverlay(!withOverlay)} /> <br />
 
         <label htmlFor="hover">Extend and collapse by hovering (big screen only):</label>
-        <input id="hover" type="checkbox" onChange={e => setExtendOnhover(!expandOnHover)}/> <br/>
+        <input id="hover" type="checkbox" onChange={e => setExtendOnhover(!expandOnHover)} /> <br />
       </div>
     </>
   )
