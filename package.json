@@ -55,6 +55,7 @@
   ],
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react-responsive": "^8.2.0"
+    "react-responsive": "^8.2.0",
+    "styled-components": "^5.2.3"
   }
 }
