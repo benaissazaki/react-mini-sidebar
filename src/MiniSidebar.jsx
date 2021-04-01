@@ -47,7 +47,30 @@ const Sidebar = styled.aside`
         `width: ${props.width || '250px'};`
         :
         `width: ${props.collapsedWidth || '70px'};`
+        }
     }
+
+`
+
+const CollapseBtn = styled.button`
+    background-color: transparent;
+    padding-bottom: 10px;
+    display: ${props => props.collapseOnMd ? 'block' : 'none'};
+    border: none;
+    font-size: 40px;
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    transition: transform 1s;
+    
+    &:focus {
+        outline: none;
+    }
+
+    transform: ${props => props.collapsed ? 'rotate(0deg)' : 'rotate(180deg)'};
+
+    @media(max-width: 768px) {
+        display: block;
     }
 
 `
@@ -69,11 +92,9 @@ export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true
                 {children}
 
                 {(!expandOnHover || isMobile) &&
-                    <button
-                        className={`${styles.sidebar_collapse_btn} ${collapseOnMd ? styles.sidebar_collapse_btn_md : ""} ${collapsed ? styles.sidebar_collapse_btn_collapsed : styles.sidebar_collapse_btn_expanded}`}
-                        onClick={() => setCollapsed(!collapsed)}>
+                    <CollapseBtn onClick={() => setCollapsed(!collapsed)} collapseOnMd={collapseOnMd} collapsed={collapsed}>
                         →
-                    </button>
+                    </CollapseBtn>
                 }
 
             </Sidebar>
