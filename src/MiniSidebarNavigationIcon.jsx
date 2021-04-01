@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components";
+import Proptypes from 'prop-types'
 
 const NavigationIcon = styled.div`
     display: inline-block;
@@ -24,4 +25,8 @@ export const MiniSidebarNavigationIcon = ({children, fillColor="black"}) => {
             {children}
         </NavigationIcon>
     )
+}
+
+MiniSidebarNavigationIcon.propTypes = {
+    fillColor: Proptypes.string
 }

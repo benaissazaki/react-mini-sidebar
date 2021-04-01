@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components";
+import Proptypes from 'prop-types'
 
 const NavigationItem = styled.li`
     display: block;
@@ -22,4 +23,8 @@ export const MiniSidebarNavigationitem = ({children, color}) => {
             {children}
         </NavigationItem>
     )
+}
+
+MiniSidebarNavigationitem.propTypes = {
+    color: Proptypes.string
 }
