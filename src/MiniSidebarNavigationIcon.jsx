@@ -12,12 +12,16 @@ const NavigationIcon = styled.div`
         max-width: 100%;
         max-height: 30px;
     }
+
+    & svg {
+        fill: ${props => props.fillColor};
+    }
 `
 
-export const MiniSidebarNavigationIcon = (props) => {
+export const MiniSidebarNavigationIcon = ({children, fillColor="black"}) => {
     return (
-        <NavigationIcon>
-            {props.children}
+        <NavigationIcon fillColor={fillColor}>
+            {children}
         </NavigationIcon>
     )
 }

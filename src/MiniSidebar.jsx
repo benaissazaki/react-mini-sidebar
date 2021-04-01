@@ -46,7 +46,7 @@ const Sidebar = styled.aside`
         `width: ${props.width || '250px'};`
         :
         `width: ${props.collapsedWidth || '70px'};`
-        }
+    }
     }
 
 `
@@ -61,6 +61,7 @@ const CollapseBtn = styled.button`
     bottom: 15px;
     left: 10px;
     transition: transform 1s;
+    color: ${props => props.color};
     
     &:focus {
         outline: none;
@@ -74,7 +75,7 @@ const CollapseBtn = styled.button`
 
 `
 
-export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true, expandOnHover = false }) => {
+export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true, expandOnHover = false, bgColor = 'white', btnColor = "black" }) => {
     const [collapsed, setCollapsed] = useState(true);
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
@@ -86,12 +87,13 @@ export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true
                 onMouseLeave={() => (expandOnHover && !isMobile) && setCollapsed(true)}
                 expanded={!collapsed}
                 collapsableMd={collapseOnMd}
-                expandedMd={!collapsed && collapseOnMd}>
+                expandedMd={!collapsed && collapseOnMd}
+                bgColor={bgColor}>
 
                 {children}
 
                 {(!expandOnHover || isMobile) &&
-                    <CollapseBtn onClick={() => setCollapsed(!collapsed)} collapseOnMd={collapseOnMd} collapsed={collapsed}>
+                    <CollapseBtn color={btnColor} onClick={() => setCollapsed(!collapsed)} collapseOnMd={collapseOnMd} collapsed={collapsed}>
                         →
                     </CollapseBtn>
                 }
@@ -105,5 +107,7 @@ export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true
 MiniSidebar.propTypes = {
     collapseOnMd: Proptypes.bool,
     withOverlay: Proptypes.bool,
-    expandOnHover: Proptypes.bool
+    expandOnHover: Proptypes.bool,
+    bgColor: Proptypes.string,
+    btnColor: Proptypes.string
 }
