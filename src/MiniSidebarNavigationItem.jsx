@@ -16,7 +16,7 @@ const NavigationItem = styled.li`
     }
 `
 
-export const MiniSidebarNavigationitem = ({children, color}) => {
+export const MiniSidebarNavigationitem = ({children, color='black'}) => {
     return (
         <NavigationItem className="sidebar-nav-item" color={color}>
             {children}

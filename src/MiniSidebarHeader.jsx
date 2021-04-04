@@ -9,7 +9,7 @@ const Header = styled.div`
     color: ${props => props.color};
 `
 
-export const MiniSidebarHeader = ({children, color}) => {
+export const MiniSidebarHeader = ({children, color='black'}) => {
     return (
         <Header color={color}>
             {children}
