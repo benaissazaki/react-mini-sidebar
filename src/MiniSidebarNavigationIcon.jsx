@@ -21,7 +21,7 @@ const NavigationIcon = styled.div`
 
 export const MiniSidebarNavigationIcon = ({children, fillColor="black"}) => {
     return (
-        <NavigationIcon fillColor={fillColor}>
+        <NavigationIcon className="sidebar-nav-icon" fillColor={fillColor}>
             {children}
         </NavigationIcon>
     )

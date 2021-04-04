@@ -32,21 +32,30 @@ const Sidebar = styled.aside`
     transition: width 1s;
     z-index: 10000;
     ${props => props.collapsableMd ?
-        `width: ${props.collapsedWidth || '70px'};`
+        `width: ${props.collapsedWidth || 70}px;`
         :
-        `width: ${props.width || '250px'};`
+        `width: ${props.width || 250}px;`
     }
 
     ${props => props.expandedMd &&
-        `width: ${props.width || '250px'};`
+        `width: ${props.width || 250}px;`
     }
 
     @media(max-width: 768px) {
         ${props => props.expanded ?
-        `width: ${props.width || '250px'};`
+        `width: ${props.width || 250}px;`
         :
-        `width: ${props.collapsedWidth || '70px'};`
+        `width: ${props.collapsedWidth || 70}px;`
     }
+    }
+
+    & .sidebar-nav-icon {
+        margin: 0 ${props => (props.collapsedWidth - props.iconContainerWidth)/2}px;
+        width: ${props => props.iconContainerWidth}px;
+    }
+
+    & .sidebar-nav-item {
+        width: ${props => props.width}px;
     }
 
 `
@@ -59,7 +68,9 @@ const CollapseBtn = styled.button`
     font-size: 40px;
     position: absolute;
     bottom: 15px;
-    left: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     transition: transform 1s;
     color: ${props => props.color};
     
@@ -75,7 +86,7 @@ const CollapseBtn = styled.button`
 
 `
 
-export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true, expandOnHover = false, bgColor = 'white', btnColor = "black" }) => {
+export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true, expandOnHover = false, bgColor = 'white', btnColor = "black", width = 250, collapsedWidth = 100, iconContainerWidth = 50 }) => {
     const [collapsed, setCollapsed] = useState(true);
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
@@ -88,12 +99,15 @@ export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true
                 expanded={!collapsed}
                 collapsableMd={collapseOnMd}
                 expandedMd={!collapsed && collapseOnMd}
-                bgColor={bgColor}>
+                bgColor={bgColor}
+                width={width}
+                collapsedWidth={collapsedWidth}
+                iconContainerWidth={iconContainerWidth}>
 
                 {children}
 
                 {(!expandOnHover || isMobile) &&
-                    <CollapseBtn color={btnColor} onClick={() => setCollapsed(!collapsed)} collapseOnMd={collapseOnMd} collapsed={collapsed}>
+                    <CollapseBtn color={btnColor} onClick={() => setCollapsed(!collapsed)} collapseOnMd={collapseOnMd} collapsed={collapsed} collapsedWidth={collapsedWidth}>
                         →
                     </CollapseBtn>
                 }

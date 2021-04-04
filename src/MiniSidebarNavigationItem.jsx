@@ -6,7 +6,6 @@ const NavigationItem = styled.li`
     display: block;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 300px;
     color: ${props => props.color || 'black'};
     &:hover {
         background-color: #e2e2e2;
@@ -19,7 +18,7 @@ const NavigationItem = styled.li`
 
 export const MiniSidebarNavigationitem = ({children, color}) => {
     return (
-        <NavigationItem color={color}>
+        <NavigationItem className="sidebar-nav-item" color={color}>
             {children}
         </NavigationItem>
     )
