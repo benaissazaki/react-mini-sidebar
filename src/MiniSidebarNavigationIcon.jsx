@@ -12,6 +12,7 @@ const NavigationIcon = styled.div`
     & svg, & img {
         max-width: 100%;
         max-height: 30px;
+        margin: 0 auto;
     }
 
     & svg {
