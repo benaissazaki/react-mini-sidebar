@@ -29,7 +29,7 @@ const Sidebar = styled.aside`
     height: 100%;
     background-color: ${props => props.bgColor || 'white'};
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    transition: width 1s;
+    transition: width ${props => props.collapseSpeed}s;
     z-index: 10000;
     ${props => props.collapsableMd ?
         `width: ${props.collapsedWidth || 70}px;`
@@ -73,7 +73,7 @@ const CollapseBtn = styled.button`
     position: absolute;
     bottom: 15px;
     left: 10px;
-    transition: transform 1s;
+    transition: transform ${props => props.collapseSpeed}s;
     color: ${props => props.color};
     
     &:focus {
@@ -88,7 +88,7 @@ const CollapseBtn = styled.button`
 
 `
 
-export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true, expandOnHover = false, bgColor = 'white', btnColor = "black", width = 250, collapsedWidth = 100, iconContainerWidth = 50 }) => {
+export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true, expandOnHover = false, bgColor = 'white', btnColor = "black", width = 250, collapsedWidth = 100, iconContainerWidth = 50, collapseSpeed = 1 }) => {
     const [collapsed, setCollapsed] = useState(true);
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
@@ -104,12 +104,13 @@ export const MiniSidebar = ({ children, collapseOnMd = false, withOverlay = true
                 bgColor={bgColor}
                 width={width}
                 collapsedWidth={collapsedWidth}
-                iconContainerWidth={iconContainerWidth}>
+                iconContainerWidth={iconContainerWidth}
+                collapseSpeed={collapseSpeed}>
 
                 {children}
 
                 {(!expandOnHover || isMobile) &&
-                    <CollapseBtn color={btnColor} onClick={() => setCollapsed(!collapsed)} collapseOnMd={collapseOnMd} collapsed={collapsed} collapsedWidth={collapsedWidth}>
+                    <CollapseBtn color={btnColor} onClick={() => setCollapsed(!collapsed)} collapseOnMd={collapseOnMd} collapsed={collapsed} collapsedWidth={collapsedWidth} collapseSpeed={collapseSpeed}>
                         →
                     </CollapseBtn>
                 }

@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <>
-      <MiniSidebar collapseOnMd={collapseOnMd} withOverlay={withOverlay} expandOnHover={expandOnHover} width={200} collapsedWidth={70}>
+      <MiniSidebar collapseOnMd={collapseOnMd} withOverlay={withOverlay} expandOnHover={expandOnHover} width={200} collapsedWidth={70} collapseSpeed={0.2}>
         <MiniSidebarHeader>
           Test
         </MiniSidebarHeader>
