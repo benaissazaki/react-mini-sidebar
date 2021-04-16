@@ -126,5 +126,9 @@ MiniSidebar.propTypes = {
     withOverlay: Proptypes.bool,
     expandOnHover: Proptypes.bool,
     bgColor: Proptypes.string,
-    btnColor: Proptypes.string
+    btnColor: Proptypes.string,
+    width: Proptypes.number,
+    collapsedWidth: Proptypes.number,
+    iconContainerWidth: Proptypes.number,
+    collapseSpeed: Proptypes.number
 }
