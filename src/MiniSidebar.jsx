@@ -72,9 +72,7 @@ const CollapseBtn = styled.button`
     font-size: 40px;
     position: absolute;
     bottom: 15px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    left: 10px;
     transition: transform 1s;
     color: ${props => props.color};
     
