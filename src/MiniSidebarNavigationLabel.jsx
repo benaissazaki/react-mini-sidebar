@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const NavigationLabel = styled.div`
     display: inline-block;
-    width: 150px;
     font-size: 20px;
     font-weight: 100;
     position: relative;
@@ -12,7 +11,7 @@ const NavigationLabel = styled.div`
 
 export const MiniSidebarNavigationLabel = (props) => {
     return (
-        <NavigationLabel>
+        <NavigationLabel className="sidebar-nav-label">
             {props.children}
         </NavigationLabel>
     )

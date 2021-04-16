@@ -58,6 +58,10 @@ const Sidebar = styled.aside`
         width: ${props => props.width}px;
     }
 
+    & .sidebar-nav-label {
+        width: ${props => props.width - props.iconContainerWidth - 50}px;
+    }
+
 `
 
 const CollapseBtn = styled.button`
