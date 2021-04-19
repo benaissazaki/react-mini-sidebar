@@ -5,13 +5,12 @@ import Proptypes from 'prop-types'
 const Header = styled.div`
     border-bottom: solid 1px #e2e2e2;
     padding: 15px;
-    text-align: center;
     color: ${props => props.color};
 `
 
 export const MiniSidebarHeader = ({children, color='black'}) => {
     return (
-        <Header color={color}>
+        <Header className="sidebar-header" color={color}>
             {children}
         </Header>
     )
