@@ -80,7 +80,8 @@ const Navigation = (props) => {
 
 ## `<MiniSidebarNavigationItem>` Props
 
-`color (string)`: Navigation item's text color (default: 'black');
+`color (string)`: Navigation item's text color (default: 'black').  
+`hoverBgColor (string)`: Background color when hovering the item (default 'rgba(255, 255, 255, 0.1)').
 
 ## License
 
