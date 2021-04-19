@@ -62,6 +62,10 @@ const Sidebar = styled.aside`
         width: ${props => props.width - props.iconContainerWidth - 50}px;
     }
 
+    & .sidebar-header img, & .sidebar-header svg {
+        max-width: ${props => props.collapsedWidth - 15*2}px;
+    }
+
 `
 
 const CollapseBtn = styled.button`
