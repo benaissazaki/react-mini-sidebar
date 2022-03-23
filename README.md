@@ -85,4 +85,4 @@ const Navigation = (props) => {
 
 ## License
 
-MIT © [lilxak](https://github.com/lilxak)
+MIT © [benaissazaki](https://github.com/benaissazaki)
